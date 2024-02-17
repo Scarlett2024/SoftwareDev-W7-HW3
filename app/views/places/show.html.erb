@@ -1,0 +1,15 @@
+<h1><%= @place["name"] %></h1>
+<br>
+<% for entry in @entries %>
+<p><strong><%= entry["title"] %></strong></p>
+<p>Description: <%= entry["description"] %></p>
+<p>Posted at: <%= entry["posted_on"] %></p>
+<br>
+<% end %>
+
+<p><a href="/entries/new">Add a new entry</a></p>
+<p><a href="/places">Back to all places</a></p>
+
+<p>
+<%= button_to "Delete place", @place, :method => "delete" %>
+</p>

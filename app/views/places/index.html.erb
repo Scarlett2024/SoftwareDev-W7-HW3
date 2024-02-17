@@ -1,0 +1,13 @@
+<h1>My Travel List</h1>
+
+<h4>This is my travel log at Kellogg.</h4>
+<ul>
+<% for place in @places %>
+<a href="/places/<%= place["id"]%>">
+<li><%= place["name"]%></li>
+</a>
+<% end %>
+</ul>
+
+<p><a href="/entries/new">Add a new entry</a></p>
+<p><a href="/places/new">Add a new place</a></p>
